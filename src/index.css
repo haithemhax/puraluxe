@@ -1,0 +1,72 @@
+@import 'tailwindcss';
+
+/* PURALUXE brand system inspired by packaging */
+:root {
+  --gold: #c7a15c;
+  --gold-light: #efe3cb;
+  --gold-dark: #8a6a33;
+  --cream: #f8f3e8;
+  --paper: #fffdf8;
+  --ink: #1e2521;
+  --charcoal: #17221d;
+  --muted: #6a6a64;
+  --green: #1f3b2f;
+  --green-light: #2f5a49;
+  --green-soft: #dfe8e3;
+}
+
+@theme {
+  --color-gold: #c7a15c;
+  --color-gold-light: #efe3cb;
+  --color-gold-dark: #8a6a33;
+  --color-cream: #f8f3e8;
+  --color-paper: #fffdf8;
+  --color-ink: #1e2521;
+  --color-charcoal: #17221d;
+  --color-muted: #6a6a64;
+  --color-pura-dark: #17221d;
+  --color-pura-ink: #1e2521;
+  --color-pura-green: #1f3b2f;
+  --color-pura-green-light: #2f5a49;
+  --color-pura-green-soft: #dfe8e3;
+  --font-cinzel: 'Cinzel', serif;
+  --font-cormorant: 'Cormorant Garamond', serif;
+  --font-jost: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--cream);
+    background-image:
+      radial-gradient(
+        ellipse 90% 55% at 50% -8%,
+        rgb(239 227 203 / 0.6),
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse 45% 30% at 100% 12%,
+        rgb(47 90 73 / 0.08),
+        transparent 72%
+      );
+    color: var(--ink);
+    font-family: var(--font-jost), system-ui, sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: rgb(199 161 92 / 0.24);
+    color: var(--charcoal);
+  }
+}
